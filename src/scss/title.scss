@@ -1,1 +1,43 @@
 @import "color";
+
+h1.title {
+  font-size: 5.5rem;
+  font-weight: 500;
+  line-height: 110%;
+  @media screen and (max-width: 1199px) {
+    font-size: 4.5rem;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 2.6rem;
+  }
+}
+
+h2.title {
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 110%;
+  @media screen and (max-width: 1199px) {
+    font-size: 4rem;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 2.5rem;
+  }
+}
+
+h3.title {
+
+  @media screen and (max-width: 1199px) {
+
+  }
+  @media screen and (max-width: 960px) {
+
+  }
+
+  @media screen and (max-width: 767px) {
+
+  }
+
+  @media screen and (max-width: 425px) {
+
+  }
+}

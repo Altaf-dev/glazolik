@@ -7,7 +7,20 @@ description: "Какое то описание для страницы, для �
 <%= _.template(require('./../includes/header.html').default)(data) %>
 
 <main>
-    <h1>Test Site</h1>
+    <section class="main" id="main">
+        <div class="main__background">
+            <img src="img/main-bg.jpg" alt="img" class="background-img">
+        </div>
+        <div class="container">
+            <div class="main__text">
+                <h1 class="title">Лазерная коррекция зрения без боли и последствий за 10 минут</h1>
+                <span class="main__subtitle">Занимаемся лазерной хирургией с 2007 года.</span>
+                <span class="main__subtitle">Каждый третий пациент приезжает к нам</span>
+                <span class="main__subtitle">из другого города</span>
+                <button class="main__btn main-btn">Получить консультацию</button>
+            </div>
+        </div>
+    </section>
 </main>
 
 <!--footer-->
