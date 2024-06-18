@@ -25,19 +25,10 @@ h2.title {
 }
 
 h3.title {
-
-  @media screen and (max-width: 1199px) {
-
-  }
-  @media screen and (max-width: 960px) {
-
-  }
-
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 120%;
   @media screen and (max-width: 767px) {
-
-  }
-
-  @media screen and (max-width: 425px) {
-
+    font-size: 2.5rem;
   }
 }

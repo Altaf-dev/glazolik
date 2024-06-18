@@ -8,16 +8,65 @@ description: "Какое то описание для страницы, для �
 
 <main>
     <section class="main" id="main">
-        <div class="main__background">
-            <img src="img/main-bg.jpg" alt="img" class="background-img">
-        </div>
         <div class="container">
-            <div class="main__text">
-                <h1 class="title">Лазерная коррекция зрения без боли и последствий за 10 минут</h1>
-                <span class="main__subtitle">Занимаемся лазерной хирургией с 2007 года.</span>
-                <span class="main__subtitle">Каждый третий пациент приезжает к нам</span>
-                <span class="main__subtitle">из другого города</span>
-                <button class="main__btn main-btn">Получить консультацию</button>
+            <div class="main__background">
+                <img src="img/main-bg.jpg" alt="img" class="background-img">
+            </div>
+            <div class="main__wrapper">
+                <div class="main__text">
+                    <h1 class="title">Лазерная коррекция зрения без боли <br> и последствий <br> за 10 минут</h1>
+                    <span class="main__subtitle">Занимаемся лазерной хирургией с 2007 года. <br> Каждый третий пациент приезжает к нам <br> из другого города</span>
+                    <button class="main__btn main-btn">Получить консультацию</button>
+                </div>
+                <div class="main__desc">
+                    <span class="desc-title">Елена Бахтияровна</span>
+                    <span class="desc-subtitle">Кандидат медицинских наук. <br> Офтальмолог с 1995 года. <br> Хирург с опытом более 30 тысяч операций</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="advantage">
+        <div class="container">
+            <div class="advantage__list">
+                <div class="list-item">
+                    <img src="img/eye.svg" alt="icon" class="item-icon">
+                    <span class="item-desc">Сможете смотреть телевизор и работать за компьютером уже через 3 часа после операции</span>
+                </div>
+                <div class="list-item">
+                    <img src="img/heart.svg" alt="icon" class="item-icon">
+                    <span class="item-desc">Без вреда и рисков: сделаем коррекцию, только если для вас она будет безопасна на 100% </span>
+                </div>
+                <div class="list-item">
+                    <img src="img/wing.svg" alt="icon" class="item-icon">
+                    <span class="item-desc">Мы одни из первых лазерных хирургов в Казахстане. Проводим коррекцию с 2007 года</span>
+                </div>
+                <div class="list-item">
+                    <img src="img/5star.svg" alt="icon" class="item-icon">
+                    <span class="item-desc">188 оценок на Яндекс. картах и 279 отзывов на Google картах</span>
+                </div>
+            </div>
+            <div class="advantage__form">
+                <div class="img-wrapper">
+                    <img src="img/advantage-form.jpg" alt="img" class="form-img">
+                </div>
+                <h3 class="title">Получите консультацию <br> об операции и работе клиники</h3>
+                <span class="subtitle">Если не хотите читать сайт и вам лучше поговорить <br> с живым человеком — оставьте контакты. <br> Мы перезвоним в течение 30 минут и с радостью <br> ответим на все ваши вопросы</span>
+                <form action="./php/mail.php"
+                      id="orderModal"
+                      method="post"
+                      accept-charset="utf-8"
+                      enctype="multipart/form-data"
+                      class="form-body">
+                    <input type="text" class="input" name="phone" required placeholder="Телефон">
+                    <input type="text" class="input" name="name" placeholder="Имя">
+                    <button class="advantage-btn main-btn" type="submit">Получить консультацию</button>
+                </form>
+                <div class="contacts-title">Или свяжитесь удобным способом:</div>
+                <div class="contacts-list">
+                    <a href="tel:+77008367870" class="contacts-link">+7 (700) 836 78 70</a>
+                    <a href="https://wa.me/+77008367870" class="contacts-link">WhatsApp</a>
+                    <a href="#" class="contacts-link">Telegram</a>
+                </div>
             </div>
         </div>
     </section>

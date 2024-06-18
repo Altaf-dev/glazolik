@@ -1,7 +1,7 @@
 @import "color";
 
 .main-btn {
-  padding: 25px 40px 25px 40px;
+  padding: 25px 35px 25px 35px;
   border-radius: 93.6px;
   background: $gradient-static;
   color: $main-text;
@@ -12,5 +12,9 @@
   &:hover{
     transform: scale(1.04);
     box-shadow: 0 4.16px 41.6px 0 rgba(248, 140, 64, 0.2);
+  }
+  @media screen and (max-width: 767px) {
+    padding: 15px 25px 15px 25px;
+    font-size: 1.4rem;
   }
 }

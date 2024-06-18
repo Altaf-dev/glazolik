@@ -2,6 +2,7 @@
 @import "color";
 @import "title";
 @import "buttons";
+@import "form";
 @import "header";
 @import "main";
 @import "footer";
@@ -19,6 +20,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 
