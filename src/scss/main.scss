@@ -4,11 +4,12 @@
 
   &__background {
     position: absolute;
-    top: -115px;
-    right: -200px;
+    top: 0;
+    right: 10%;
     z-index: -5;
-    width: 1300px;
-    height: 895px;
+    width: 90vw;
+    max-width: 1500px;
+    height: auto;
     &:before {
       content: '';
       position: absolute;
@@ -41,23 +42,26 @@
         height: 180px;
       }
     }
-    @media screen and (max-width: 1600px) {
-      right: -100px;
+    @media screen and (max-width: 1919px) {
+      right: 0;
+      //right: -100px;
     }
     @media screen and (max-width: 1199px) {
-      top: -65px;
-      right: -40px;
-    }
-    @media screen and (max-width: 960px) {
+      width: 1550px;
       right: 65%;
       transform: translate(50%, 0);
     }
+    @media screen and (max-width: 960px) {
+
+    }
     @media screen and (max-width: 767px) {
-      width: 150%;
-      height: auto;
+      //width: 150%;
+      //height: auto;
+      width: 1000px;
     }
     @media screen and (max-width: 425px) {
-      top: -65px;
+      width: 685px;
+      //top: -65px;
     }
   }
 
@@ -72,10 +76,10 @@
     height: 580px;
     @media screen and (max-width: 1199px) {
       justify-content: center;
-      height: 880px;
+      height: 890px;
     }
     @media screen and (max-width: 767px) {
-      height: 500px;
+      height: 510px;
     }
   }
 
@@ -270,11 +274,10 @@
   .img-wrapper {
     position: absolute;
     bottom: 0;
-    right: 0;
-    width: 641px;
-    height: 568px;
+    right: 20px;
+    width: 506px;
+    height: 573px;
     overflow: hidden;
-    z-index: -5;
     @media screen and (max-width: 1199px) {
       width: 450px;
       height: 519px;
@@ -329,8 +332,10 @@
   }
 
   .form-body {
+    position: relative;
     margin-top: 22px;
     margin-bottom: 42px;
+    z-index: 2;
     @media screen and (max-width: 960px) {
       display: flex;
       flex-direction: column;
@@ -393,4 +398,87 @@
       margin-bottom: 8px;
     }
   }
+}
+
+.operation {
+  padding-top: 60px;
+  padding-bottom: 100px;
+  @media screen and (max-width: 1199px) {
+    padding-top: 80px;
+  }
+  @media screen and (max-width: 767px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .title {
+    margin-bottom: 30px;
+  }
+
+  .subtitle {
+    display: block;
+    max-width: 900px;
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 160%;
+  }
+
+  &__questions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 110px;
+  }
+
+  .questions-item {
+    width: 49%;
+  }
+
+  .item-title {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 128%;
+  }
+
+  .item-desc {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 160%;
+  }
+
+  &__video {
+
+  }
+
+  .video-desc {
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+  }
+
+  .desc-title {
+    margin-bottom: 20px;
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 128%;
+  }
+
+  .desc-paragraph {
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 160%;
+  }
+
+  .video-slider {
+    max-width: 810px;
+  }
+
+
+}
+
+.ytp-chrome-top, .ytp-chrome-bottom {
+  display: none;
 }

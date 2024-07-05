@@ -60,3 +60,15 @@ textarea {
   transition: .3s;
   outline: 0;
 }
+
+.section-title {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: $green-text;
+  @media screen and (max-width: 767px) {
+    font-size: 1.2rem;
+  }
+}
