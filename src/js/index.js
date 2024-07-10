@@ -1,45 +1,62 @@
+const VIDEO = document.querySelectorAll('.video-slide')
+
+
+let questionsSlider = new Swiper('.slider-wrapper', {
+    speed: 400,
+    slidesPerView: 3,
+    centeredSlides: false,
+    spaceBetween: 15,
+    breakpoints: {
+        320: {
+            slidesPerView: 1.5,
+        },
+        600: {
+            slidesPerView: 3,
+        },
+        960: {
+            // slidesPerView: 3.5,
+        },
+        1199: {
+            slidesPerView: 3,
+        },
+    },
+
+})
+
+let teamSlider = new Swiper('.hardware-slider', {
+    speed: 400,
+    slidesPerView: 1,
+    centeredSlides: true,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: '.hardware-button-next',
+        prevEl: '.hardware-button-prev',
+    },
+
+    // breakpoints: {
+    //     320: {
+    //         slidesPerView: 1.5,
+    //     },
+    //     600: {
+    //         slidesPerView: 3,
+    //     },
+    //     960: {
+    //         slidesPerView: 3.5,
+    //     },
+    //     1199: {
+    //         slidesPerView: 3,
+    //     },
+    // },
+
+})
 
 
 
-// function sliderInit() {
-//
-// }
-// sliderInit()
-//
-// let teamSlider = new Swiper('.video-slider', {
-//     breakpoints: {
-//         320: {
-//             loop: true,
-//             speed: 400,
-//             slidesPerView: 3,
-//             centeredSlides: true,
-//
-//         },
-//         767: {
-//             destroy: true
-//         },
-//     },
-//
-// })
-//
-// window.addEventListener("resize", () => {
-//     let width = window.innerWidth
-//
-//     if (width >= 960) {
-//
-//     } else {
-//
-//     }
-// });
-//
-const video = document.querySelector('.video-slide')
-
-
-video.addEventListener('mouseenter', function() {
-    video.play();
-});
-
-video.addEventListener('mouseleave', function() {
-    video.pause();
-});
-
+VIDEO.forEach((item) => {
+    item.addEventListener('mouseenter', ()=> {
+        item.play()
+    })
+    item.addEventListener('mouseleave', ()=> {
+        item.pause()
+    })
+})
