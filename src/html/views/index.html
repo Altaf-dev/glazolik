@@ -52,7 +52,7 @@ description: "Какое то описание для страницы, для �
                 <h3 class="title">Получите консультацию <br> об операции и работе клиники</h3>
                 <span class="subtitle">Если не хотите читать сайт и вам лучше поговорить <br> с живым человеком — оставьте контакты. <br> Мы перезвоним в течение 30 минут и с радостью <br> ответим на все ваши вопросы</span>
                 <form action="./php/mail.php"
-                      id="orderModal"
+                      id="advantageForm"
                       method="post"
                       accept-charset="utf-8"
                       enctype="multipart/form-data"
@@ -181,6 +181,94 @@ description: "Какое то описание для страницы, для �
                 </span>
                 <div class="doc-name">
                     <span class="name-text"><span class="strong">Елена Бахтияровна</span>Главный врач клиники ГлазоЛик</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="diagnostics" id="diagnostics">
+        <div class="container">
+            <span class="section-title">диагностика</span>
+            <h2 class="title">
+                Как узнать, подходит ли вам лазерная коррекция и какой результат <br>
+                вы получите в итоге?
+            </h2>
+            <span class="subtitle">
+                Пройдите диагностику зрения в нашей клинике. <br>
+                На ней мы в течение двух часов проведём полное обследование <br>
+                и подготовим подробный отчёт о состоянии ваших глаз.
+            </span>
+            <div class="diagnostics__list">
+                <div class="list-item">
+                    <div class="item-desc">
+                        <span class="desc-title">Сначала проведём полное обследование зрения по 30 параметрам</span>
+                        <ul class="desc-list">
+                            <li class="desc-item">Поймём, подходит ли вам лазерная коррекция и какую подготовку нужно провести, чтобы процедура была максимально безопасной.</li>
+                            <li class="desc-item">Найдём причины ухудшения зрения и расскажем, как их можно устранить.</li>
+                            <li class="desc-item">Если обнаружим скрытые заболевания и противопоказания — подберём другой способ улучшить зрение.</li>
+                        </ul>
+                        <a href="#" class="item-link">Список проводимых исследований</a>
+                    </div>
+                    <div class="img-wrapper">
+                        <img class="item-img" src="img/diagnostics1.jpg" alt="img">
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="item-desc">
+                        <span class="desc-title">Затем доктор изучит вашу ситуацию и даст подробную консультацию</span>
+                        <ul class="desc-list">
+                            <li class="desc-item">Узнает об образе жизни и профессии, чтобы подобрать подходящую под вас методику.</li>
+                            <li class="desc-item">Даст прогноз, какого результата можно ожидать от коррекции.</li>
+                            <li class="desc-item">Снимет страхи перед операцией и расскажет, как всё будет происходить.</li>
+                        </ul>
+                    </div>
+                    <div class="img-wrapper">
+                        <img class="item-img" src="img/diagnostics2.jpg" alt="img">
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="item-desc">
+                        <span class="desc-title">Подготовим отчёт о состоянии зрения, показаниях к операции и возможных рисках</span>
+                        <ul class="desc-list">
+                            <li class="desc-item">С этим отчётом вы сможете пойти в любую другую клинику, если вам не подойдут условия у нас.</li>
+                        </ul>
+                    </div>
+                    <div class="img-wrapper">
+                        <img class="item-img" src="img/diagnostics3.jpg" alt="img">
+                    </div>
+                </div>
+            </div>
+            <div class="diagnostics__form">
+                <div class="form-desc">
+                    <span class="form-title">
+                        Запишитесь на диагностику <br>
+                        и узнайте, насколько <br>
+                        безопасно делать коррекцию <br>
+                        именно в вашем случае
+                    </span>
+                    <div class="text-wrapper">
+                        <span class="form-text-mobile">Оставьте контакты, перезвоним в течение 30 минут <span class="accent"> в рабочее время</span></span>
+                        <span class="desc-sum">15 000 ₸</span>
+                        <span class="desc-subtitle">Стоимость диагностики </span>
+                    </div>
+                </div>
+                <div class="form-wrapper">
+                    <span class="form-text">Оставьте контакты, перезвоним в течение 30 минут <span class="accent"> в рабочее время</span></span>
+                    <form action="./php/mail.php"
+                          id="diagnosticsForm"
+                          method="post"
+                          accept-charset="utf-8"
+                          enctype="multipart/form-data"
+                          class="form-body">
+                        <input type="text" class="input" name="phone" required placeholder="Телефон">
+                        <input type="text" class="input" name="name" placeholder="Имя">
+                        <button class="diagnostics-btn main-btn" type="submit">Записаться</button>
+                    </form>
+                </div>
+            </div>
+            <div class="diagnostics__contact">
+                <span class="contact-desc">Если у вас есть вопросы — <a href="https://wa.me/+77008367870" target="_blank" class="contact-whats">напишите нам в WhatsApp</a>  или позвоните по номеру <a href="tel:+77008367870" target="_blank" class="contact-phone">+7 (700) 836 78 70</a></span>
+                <div class="wrapper">
+                    <img src="img/advantage-form.jpg" alt="img" class="contact-img">
                 </div>
             </div>
         </div>
