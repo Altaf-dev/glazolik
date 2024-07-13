@@ -9,6 +9,7 @@
   font-weight: 500;
   line-height: 150%;
   transition: .2s linear;
+  cursor: pointer;
   &:hover{
     transform: scale(1.04);
     box-shadow: 0 4.16px 41.6px 0 rgba(248, 140, 64, 0.2);
@@ -31,6 +32,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(44px);
   background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
   &:before {
     content: '';
     position: absolute;

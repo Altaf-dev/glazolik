@@ -13,9 +13,6 @@ let questionsSlider = new Swiper('.slider-wrapper', {
         600: {
             slidesPerView: 3,
         },
-        960: {
-            // slidesPerView: 3.5,
-        },
         1199: {
             slidesPerView: 3,
         },
@@ -25,6 +22,7 @@ let questionsSlider = new Swiper('.slider-wrapper', {
 
 let teamSlider = new Swiper('.hardware-slider', {
     speed: 400,
+    loop: true,
     slidesPerView: 1,
     centeredSlides: true,
     spaceBetween: 20,
@@ -32,24 +30,19 @@ let teamSlider = new Swiper('.hardware-slider', {
         nextEl: '.hardware-button-next',
         prevEl: '.hardware-button-prev',
     },
-
-    // breakpoints: {
-    //     320: {
-    //         slidesPerView: 1.5,
-    //     },
-    //     600: {
-    //         slidesPerView: 3,
-    //     },
-    //     960: {
-    //         slidesPerView: 3.5,
-    //     },
-    //     1199: {
-    //         slidesPerView: 3,
-    //     },
-    // },
-
 })
 
+let aboutSlider = new Swiper('.about__slider', {
+    speed: 400,
+    loop: true,
+    // // slidesPerView: 1,
+    // centeredSlides: true,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: '.about-button-prev',
+        prevEl: '.about-button-next',
+    },
+})
 
 
 VIDEO.forEach((item) => {
@@ -60,3 +53,6 @@ VIDEO.forEach((item) => {
         item.pause()
     })
 })
+
+
+
