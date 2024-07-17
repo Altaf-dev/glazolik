@@ -1,4 +1,5 @@
 const VIDEO = document.querySelectorAll('.video-slide')
+const DOC_CARD = document.querySelectorAll('.doctors__card')
 
 
 let questionsSlider = new Swiper('.slider-wrapper', {
@@ -44,7 +45,6 @@ let aboutSlider = new Swiper('.about__slider', {
     },
 })
 
-
 VIDEO.forEach((item) => {
     item.addEventListener('mouseenter', ()=> {
         item.play()
@@ -54,5 +54,28 @@ VIDEO.forEach((item) => {
     })
 })
 
+const LIST_BTN = document.querySelector('.list-btn')
+const DOCTORS_LIST = document.querySelector('.doctors__list')
+
+LIST_BTN.addEventListener('click', () => {
+    DOCTORS_LIST.classList.toggle('active')
+})
+
+DOC_CARD.forEach((item) => {
+    const IMG_BLOCK = item.querySelector('.img-block')
+    const LIST = item.querySelector('.cert-list')
+    const ITEM_COUNT = LIST.querySelectorAll('.cert-item').length
+    const ITEM_SUM = item.querySelector('.item-sum')
+    const CERT_SHOW = item.querySelector('.list-desc')
+    ITEM_SUM.textContent = "" + ITEM_COUNT
+
+    CERT_SHOW.addEventListener('click', () => {
+        IMG_BLOCK.classList.toggle('active')
+    })
+
+    if (ITEM_COUNT <= 8) {
+        IMG_BLOCK.classList.add('show-all')
+    }
+})
 
 
