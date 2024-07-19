@@ -56,27 +56,37 @@ VIDEO.forEach((item) => {
 })
 
 DOC_CARD.forEach((item) => {
-    const IMG_BLOCK = item.querySelector('.img-block')
     const LIST = item.querySelector('.cert-list')
-    const ITEM_COUNT = LIST.querySelectorAll('.cert-item').length
+    const ITEM_COUNT = LIST.querySelectorAll('.cert-link').length
     const ITEM_SUM = item.querySelector('.item-sum')
     const CERT_SHOW = item.querySelector('.list-desc')
     ITEM_SUM.textContent = "" + ITEM_COUNT
+    const TITLE_BTN = LIST_BTN.textContent
 
     CERT_SHOW.addEventListener('click', () => {
         LIST.classList.toggle('active')
+        CERT_SHOW.classList.toggle('active')
     })
 
     if (ITEM_COUNT <= 8) {
-        IMG_BLOCK.classList.add('show-all')
+        LIST.classList.add('show-all')
+        CERT_SHOW.classList.add('hide')
     }
 
     LIST_BTN.addEventListener('click', ()=> {
         if (item.classList.contains('hide')) {
             item.classList.toggle('visible')
         }
-    })
+        LIST_BTN.textContent = LIST_BTN.textContent === TITLE_BTN ? 'Свернуть' : TITLE_BTN
 
+    })
 })
 
 
+
+
+
+// LIST_BTN.addEventListener('click', ()=> {
+//     this.textContent = this.textContent === 'Показать всех докторов клиники' ? 'Остановить' : 'Начать'
+// })
+//
