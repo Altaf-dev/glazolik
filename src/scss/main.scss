@@ -1415,9 +1415,10 @@
   }
 
   &__card {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    overflow: hidden;
+    //overflow: hidden;
     max-height: 0;
     margin: 0;
     opacity: 0;
@@ -1431,16 +1432,40 @@
       opacity: 1;
       @media screen and (max-width: 1199px) {
         margin-top: 70px;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      @media screen and (max-width: 960px) {
+        &:last-child {
+          margin-bottom: 50px;
+        }
+      }
+    }
+    @media screen and (max-width: 960px) {
+      flex-direction: column;
+      margin-top: 50px;
+      &:first-child {
+        margin-top: 0;
       }
     }
   }
 
-  .img-block {
-    position: relative;
+  .img-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
     max-width: 600px;
     width: 100%;
     @media screen and (max-width: 1199px) {
       max-width: 430px;
+    }
+    @media screen and (max-width: 960px) {
+      position: relative;
+      order: 1;
+    }
+    @media screen and (max-width: 767px) {
+      max-width: 200px;
     }
   }
 
@@ -1452,6 +1477,26 @@
     border-radius: 20px;
     @media screen and (max-width: 1199px) {
       height: 360px;
+    }
+    @media screen and (max-width: 767px) {
+      height: 200px;
+    }
+  }
+
+  .cert-wrapper {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    margin-top: 420px;
+    @media screen and (max-width: 1199px) {
+      max-width: 430px;
+      margin-top: 360px;
+    }
+    @media screen and (max-width: 960px) {
+      order: 3;
+      max-width: 100%;
+      margin-top: 0;
+      overflow: auto;
     }
   }
 
@@ -1474,10 +1519,6 @@
       background: linear-gradient(180.00deg, rgba(12, 18, 38, 0),rgb(12, 18, 38) 100%);
       transition: .2s;
     }
-    @media screen and (max-width: 1199px) {
-      max-height: 610px;
-      gap: 10px 10px;
-    }
     &.active {
       max-height: 2000px;
       &:after {
@@ -1486,6 +1527,18 @@
     }
 
     &.show-all {
+      &:after {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 1199px) {
+      max-height: 610px;
+      gap: 10px 10px;
+    }
+    @media screen and (max-width: 960px) {
+      flex-wrap: nowrap;
+      max-height: none;
+      width: fit-content;
       &:after {
         display: none;
       }
@@ -1499,8 +1552,8 @@
   }
 
   .list-desc {
-    position: relative;
-    bottom: 45px;
+    position: absolute;
+    bottom: 0;
     display: block;
     width: 100%;
     margin-top: 10px;
@@ -1513,25 +1566,40 @@
     z-index: 5;
     cursor: pointer;
     &.active {
-      bottom: 0;
+      bottom: -45px;
     }
     &.hide {
       display: none;
     }
     @media screen and (max-width: 1199px) {
-      bottom: 65px;
       width: 245px;
-      margin: 10px auto 0;
+      left: 50%;
+      translate: -50%;
       font-size: 2.2rem;
       line-height: 120%;
+      &.active {
+        bottom: -60px;
+      }
+    }
+    @media screen and (max-width: 960px) {
+      display: none;
     }
   }
 
-  .desc-block {
+  .desc-wrapper {
     max-width: 560px;
     width: 100%;
+    @media screen and (max-width: 1400px) {
+      max-width: 530px;
+    }
     @media screen and (max-width: 1199px) {
       margin-left: 20px;
+      max-width: 100%;
+    }
+    @media screen and (max-width: 960px) {
+      order: 2;
+      margin-top: 20px;
+      margin-left: 0;
     }
   }
 
@@ -1544,6 +1612,9 @@
     @media screen and (max-width: 1199px) {
       font-size: 3.2rem;
     }
+    @media screen and (max-width: 960px) {
+      font-size: 2rem;
+    }
   }
 
   .card-desc {
@@ -1552,8 +1623,8 @@
     font-weight: 400;
     line-height: 160%;
     opacity: .8;
-    @media screen and (max-width: 1199px) {
-
+    @media screen and (max-width: 960px) {
+      font-size: 1.5rem;
     }
   }
 
@@ -1573,6 +1644,9 @@
     @media screen and (max-width: 1199px) {
       font-size: 3.2rem;
     }
+    @media screen and (max-width: 960px) {
+      display: none;
+    }
   }
 
   .quote-link {
@@ -1585,12 +1659,14 @@
     svg {
       margin-right: 10px;
     }
-    @media screen and (max-width: 1199px) {
-
+    @media screen and (max-width: 960px) {
+      display: none;
     }
   }
 
   .list-btn {
+    position: relative;
+    z-index: 10;
     display: block;
     margin: 50px auto 0;
     padding: 25px 45px 25px 45px;
@@ -1602,6 +1678,350 @@
     line-height: 160%;
     color: $main-text;
     transition: .3s;
+    @media screen and (max-width: 1199px) {
+      margin: 70px auto 0;
+    }
+    @media screen and (max-width: 960px) {
+      margin: 50px auto 0;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 1.5rem;
+      padding: 20px 35px 20px 35px;
+      margin-top: 0;
+
+    }
+  }
+}
+
+.reviews {
+  padding-top: 60px;
+  padding-bottom: 100px;
+  @media screen and (max-width: 1199px) {
+    padding-top: 80px;
+  }
+  @media screen and (max-width: 767px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.price {
+  padding-top: 60px;
+  padding-bottom: 100px;
+  @media screen and (max-width: 1199px) {
+    padding-top: 80px;
+  }
+  @media screen and (max-width: 767px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .title {
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
+  }
+
+  .subtitle {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 160%;
+    opacity: .8;
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+      margin-top: 25px;
+      margin-bottom: 60px;
+    }
+    @media screen and (max-width: 960px) {
+      margin-top: 15px;
+      margin-bottom: 30px;
+      font-size: 1.7rem;
+    }
+
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 1199px) {
+      flex-direction: column;
+    }
+  }
+
+  .item-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 790px;
+    width: 100%;
+    color: $body-color;
+    border-radius: 20px;
+    overflow: hidden;
+    @media screen and (max-width: 1199px) {
+      flex-direction: column;
+      max-width: 100%;
+      border-radius: 0;
+    }
+    .price-item {
+      height: 100%;
+      margin-left: 0;
+      background-color: $main-text;
+      border-radius: 0;
+      @media screen and (max-width: 1199px) {
+        border-radius: 20px;
+      }
+      @media screen and (max-width: 767px) {
+        border-radius: 10px;
+      }
+    }
+    .item-mark {
+      background-color: #D1D3D6;
+    }
+    .item-title,
+    .item-subtitle,
+    .desc-list,
+    .item-desc,
+    .item-sum {
+      opacity: 1;
+    }
+
+    .item-desc {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 13px;
+        left: -15px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $body-color;
+        @media screen and (max-width: 767px) {
+          top: 9px;
+          left: -14px;
+        }
+      }
+    }
+  }
+
+  .price-item {
+    display: flex;
+    flex-direction: column;
+    max-width: 395px;
+    width: 100%;
+    height: fit-content;
+    padding: 35px 30px 50px;
+    margin-left: 30px;
+    border-radius: 20px;
+    background-color: rgb(27, 33, 52);
+    &:first-child {
+      border-right: 1px solid rgba(12, 18, 38, .2);
+      @media screen and (max-width: 1199px) {
+        border: none;
+      }
+    }
+    @media screen and (max-width: 1199px) {
+      max-width: 100%;
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+    @media screen and (max-width: 767px) {
+      border-radius: 10px;
+    }
+    @media screen and (max-width: 425px) {
+      padding: 25px 20px 30px;
+    }
+  }
+
+  .item-mark {
+    width: fit-content;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 160%;
+    opacity: .8;
+    background: rgba(255, 255, 255, 0.1);
+    @media screen and (max-width: 767px) {
+      padding: 5px 8px;
+      font-size: 1.2rem;
+    }
+  }
+
+  .item-title {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 128%;
+    opacity: .8;
+    @media screen and (max-width: 767px) {
+      font-size: 2.2rem;
+    }
+  }
+
+  .item-subtitle {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 160%;
+    opacity: .8;
+    @media screen and (max-width: 767px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .desc-list {
+    padding-left: 15px;
+    margin-bottom: 30px;
+    opacity: .8;
+  }
+
+  .item-desc {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 160%;
+    opacity: .8;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 1199px) {
+      flex-direction: row;
+      align-items: center;
+    }
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  .sum-wrapper {
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 1199px) {
+      flex-direction: row;
+      align-items: center;
+      order: 2;
+    }
+    @media screen and (max-width: 767px) {
+      order: 1;
+    }
+  }
+
+  .item-sum {
+    font-size: 4.5rem;
+    font-weight: 500;
+    line-height: 110%;
+    opacity: .8;
+    @media screen and (max-width: 767px) {
+      font-size: 2.6rem;
+    }
+    @media screen and (max-width: 359px) {
+      font-size: 2.3rem;
+    }
+  }
+
+  .sum-subtitle {
+    display: block;
+    max-width: 270px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 150%;
+    @media screen and (max-width: 767px) {
+      order: 2;
+      font-size: 1.4rem;
+    }
+  }
+
+  .item-btn {
+    width: 100%;
+    max-width: 215px;
+    margin-top: 12px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 150%;
+    color: $main-text;
+    @media screen and (max-width: 1199px) {
+      order: 1;
+      margin-right: 18px;
+    }
+    @media screen and (max-width: 767px) {
+      order: 2;
+      max-width: 300px;
+      font-size: 1.5rem;
+    }
+  }
+  &__payment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 50px;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: #1B2134;
+    @media screen and (max-width: 1199px) {
+      padding: 25px 30px;
+    }
+    @media screen and (max-width: 960px) {
+      flex-direction: column;
+      padding: 25px 20px;
+      margin-top: 0;
+    }
+  }
+
+  .payment-logo {
+    width: 87px;
+    height: 87px;
+    object-fit: contain;
+    @media screen and (max-width: 1199px) {
+      display: none;
+    }
+  }
+
+  .payment-desc {
+    max-width: 620px;
+    margin-left: 45px;
+    margin-right: auto;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 128%;
+    @media screen and (max-width: 1199px) {
+      margin-left: 0;
+    }
+    @media screen and (max-width: 960px) {
+      margin-bottom: 15px;
+      margin-right: 0;
+      text-align: center;
+      font-size: 1.7rem;
+    }
+  }
+
+  .payment-link {
+    padding: 20px 30px;
+    border-radius: 90px;
+    background-color: $main-text;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 140%;
+    color: $body-color;
+    @media screen and (max-width: 960px) {
+      padding: 15px 25px;
+      font-size: 1.5rem;
+    }
   }
 }
 
