@@ -519,6 +519,55 @@ description: "Какое то описание для страницы, для �
                 <div class="payment-desc">Операцию можно оплатить в рассрочку без % от 3 месяцев</div>
                 <a href="#" class="payment-link">Узнать подробнее</a>
             </div>
+            <div class="price__form">
+                <img src="img/price-form.jpg" alt="img" class="form-img">
+                <div class="form-wrapper">
+                    <span class="form-title">Запишитесь на диагностику</span>
+                    <span class="form-title-mobile">Запишитесь на диагностику и узнайте, насколько безопасно делать коррекцию именно в вашем случае</span>
+                    <span class="form-subtitle">Для записи оставьте контакты, перезвоним в течение 30 минут
+                        <span class="subtitle-accent">в рабочее время</span>
+                    </span>
+                    <span class="form-sum">15 000 ₸</span>
+                    <span class="sum-desc">Стоимость диагностики </span>
+                    <form action="./php/mail.php"
+                          id="priceForm"
+                          method="post"
+                          accept-charset="utf-8"
+                          enctype="multipart/form-data"
+                          class="form-body">
+                        <input type="text" class="input" name="phone" required placeholder="Телефон">
+                        <input type="text" class="input" name="name" placeholder="Имя">
+                        <button class="price-btn main-btn" type="submit">Записаться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <span class="section-title">контакты</span>
+            <div class="contacts__wrapper">
+                <div class="contacts__text">
+                    <h2 class="title">Контакты</h2>
+                    <div class="contacts__address">Караганда, ул. Ержанова , 12</div>
+                    <button class="contacts__map">На карте</button>
+                    <a href="tel:+77751173333" class="contacts__phone">+7 (775) 117 33 33</a>
+                    <button class="contacts__popup">Можем перезвонить</button>
+                    <span class="contacts__desc">Понедельник-пятница — с 9:00 до 17:00</span>
+                    <span class="contacts__desc">Суббота — с 9:00 до 13:00</span>
+                    <span class="contacts__desc">Воскресенье — выходной</span>
+                </div>
+                <div class="contacts__background">
+                    <img src="img/contacts.jpg" alt="img" class="background-img">
+                </div>
+            </div>
+            <div class="contacts__bottom">
+                <div class="img-wrapper">
+                    <img src="img/advantage-form.jpg" alt="img" class="bottom-img">
+                </div>
+                <div class="bottom-desc">Если у вас остались вопросы об операции или клинике — напишите нам</div>
+                <a href="#" class="bottom-link">Написать в WhatsApp</a>
+            </div>
         </div>
     </section>
 </main>
