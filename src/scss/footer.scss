@@ -1,5 +1,206 @@
 @import "color";
 
 .footer {
+  padding: 30px 0;
 
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 1199px) {
+      align-items: start;
+      height: 135px;
+    }
+    @media screen and (max-width: 960px) {
+      height: 100px;
+    }
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 310px;
+    width: 100%;
+    @media screen and (max-width: 960px) {
+      max-width: 165px;
+    }
+    @media screen and (max-width: 767px) {
+      margin-right: auto;
+    }
+  }
+
+  .logo-img {
+    width: 73px;
+    height: 73px;
+    margin-right: 14px;
+    object-fit: contain;
+    @media screen and (max-width: 960px) {
+      width: 41px;
+      height: 41px;
+      margin-right: 7px;
+    }
+  }
+
+  .text-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo-title {
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 110%;
+    color: $main-text;
+    @media screen and (max-width: 960px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .logo-subtitle {
+    display: block;
+    margin-top: 5px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 140%;
+    color: $main-text;
+    @media screen and (max-width: 960px) {
+      font-size: .9rem;
+    }
+  }
+
+  .contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 455px;
+    width: 100%;
+    margin: 0 auto;
+    @media screen and (max-width: 1199px) {
+      flex-direction: column;
+      max-width: fit-content;
+      height: 100%;
+    }
+    @media screen and (max-width: 767px) {
+      margin-top: 25px;
+    }
+  }
+
+  &__link {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 110%;
+    color: $main-text;
+    @media screen and (max-width: 1199px) {
+      order: 2;
+    }
+    @media screen and (max-width: 960px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    @media screen and (max-width: 1199px) {
+      order: 1;
+    }
+    @media screen and (max-width: 767px) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      align-items: end;
+    }
+  }
+
+  .contact-phone {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 110%;
+    color: $main-text;
+    @media screen and (max-width: 960px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .contact-email {
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 110%;
+    color: $main-text;
+    @media screen and (max-width: 960px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .link-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    @media screen and (max-width: 1199px) {
+      justify-content: space-between;
+      height: 100%;
+    }
+    @media screen and (max-width: 767px) {
+      align-items: center;
+      margin-top: 10px;
+    }
+  }
+
+  .diple {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 110%;
+    color: $main-text;
+    @media screen and (max-width: 960px) {
+      margin-bottom: 60px;
+      font-size: 1.5rem;
+    }
+    @media screen and (max-width: 767px) {
+      margin-bottom: 0;
+      order: 2;
+    }
+  }
+
+  .diple-icon {
+    display: block;
+    background-image: url("../img/diple.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 24px;
+    margin-left: 9px;
+    @media screen and (max-width: 960px) {
+      width: 55px;
+      height: 15px;
+      margin-left: 5px;
+    }
+  }
+
+  .link-item {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 140%;
+    color: $main-text;
+    opacity: .5;
+    @media screen and (max-width: 960px) {
+      font-size: 1.5rem;
+    }
+    @media screen and (max-width: 767px) {
+      order: 1;
+      margin-bottom: 35px;
+    }
+  }
 }
