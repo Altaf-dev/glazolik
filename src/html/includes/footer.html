@@ -21,6 +21,35 @@
             </div>
         </div>
     </div>
+
+    <div class="modal-bg closeModal"></div>
+    <div class="modal modal-consultation">
+        <button class="modal-close closeModal"></button>
+        <h3 class="title">Получите консультацию медсестры по всем вопросам</h3>
+        <span class="modal-subtitle">Оставьте контакты, мы перезвоним в течение 30 минут в рабочее время</span>
+        <form action="./php/mail.php"
+              id="consultationModal"
+              method="post"
+              accept-charset="utf-8"
+              enctype="multipart/form-data"
+              class="form-body">
+            <input type="text" class="input" name="phone" required placeholder="Телефон">
+            <input type="text" class="input" name="name" placeholder="Имя">
+            <button class="modal-btn main-btn" type="submit">Получить консультацию</button>
+        </form>
+    </div>
+    <div class="modal modal-map">
+        <button class="modal-close closeModal"></button>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac6b42b8045c9c5ad8ebcd633c3f8b9c184b1c6927415290023420b30b8fe89df&amp;source=constructor" width="100%" height="450" frameborder="0"></iframe>
+    </div>
+    <div class="modal-bg-review closeModal"></div>
+    <div class="modal modal-review">
+        <button class="modal-close closeModal"></button>
+        <div class="icon-wrapper"></div>
+        <p class="review-paragraph"></p>
+    </div>
+
+
 </footer>
 <script src="uploads/jquery3.4.1.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>

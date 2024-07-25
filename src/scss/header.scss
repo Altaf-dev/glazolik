@@ -1,12 +1,17 @@
 @import "color";
 
 .header {
-
+  @media screen and (max-width: 1199px) {
+    height: 145px;
+  }
   &__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 0;
+    @media screen and (max-width: 1199px) {
+
+    }
     @media screen and (max-width: 767px) {
       padding: 10px 0;
     }
@@ -63,7 +68,23 @@
     width: 100%;
     height: 70px;
     @media screen and (max-width: 1199px) {
-      display: none;
+      position: absolute;
+      top: 110px;
+      left: 0;
+      z-index: 15;
+      max-width: 100%;
+      &.active {
+        position: fixed;
+        top: 0;
+        background: linear-gradient(180deg, rgb(12, 18, 38) 75%,rgba(12, 18, 38, 0) 100%);
+      }
+    }
+    @media screen and (max-width: 960px) {
+      overflow: auto;
+    }
+    @media screen and (max-width: 767px) {
+      top: 65px;
+      height: 50px;
     }
   }
 
@@ -77,11 +98,50 @@
       content: '';
       display: block;
       width: 35%;
+      @media screen and (max-width: 1199px) {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 1199px) {
+      align-items: center;
+      padding: 0 20px;
+    }
+    @media screen and (max-width: 960px) {
+      width: 125vw;
+    }
+    @media screen and (max-width: 540px) {
+      width: 155vw;
+    }
+    @media screen and (max-width: 425px) {
+      width: 180vw;
     }
   }
 
-  .list-item {
-    border-bottom: 1px solid rgba(245, 245, 245, 0.2);
+  .menu-item {
+    position: relative;
+    font-size: 1.9rem;
+    font-weight: 400;
+    line-height: 150%;
+    color: $main-text;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(245, 245, 245, .2);
+    }
+    &.active {
+      position: relative;
+      &:after {
+        height: 2px;
+        background-color: rgba(245, 245, 245, 1);
+      }
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 1.3rem;
+    }
   }
 
   .item-link {
@@ -89,6 +149,9 @@
     font-weight: 400;
     line-height: 150%;
     color: $main-text;
+    @media screen and (max-width: 767px) {
+      font-size: 1.3rem;
+    }
   }
 
   &__contacts {
@@ -96,9 +159,6 @@
     display: flex;
     flex-direction: column;
     align-items: end;
-    @media screen and (max-width: 767px) {
-      display: none;
-    }
   }
 
   .phone-link {
@@ -106,6 +166,9 @@
     font-weight: 700;
     line-height: 110%;
     color: $main-text;
+    @media screen and (max-width: 767px) {
+      font-size: 1.4rem;
+    }
   }
 
   .dropdown-btn {
@@ -120,7 +183,14 @@
         border-radius: 20px;
         transform-origin: right top;
         transform: scale(1.5);
+        z-index: 15;
+        @media screen and (max-width: 767px) {
+          border-radius: 10px;
+        }
       }
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 1rem;
     }
   }
 
@@ -136,12 +206,19 @@
     transform: scale(0);
     background-color: $main-text;
     transition: .3s ease;
+    @media screen and (max-width: 767px) {
+      width: 160px;
+      padding: 15px 10px;
+    }
   }
 
-  .menu-item {
+  .dropdown-item {
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 150%;
     color: $body-color;
+    @media screen and (max-width: 767px) {
+      font-size: 1.2rem;
+    }
   }
 }

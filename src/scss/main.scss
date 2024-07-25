@@ -1702,6 +1702,122 @@
     padding-top: 40px;
     padding-bottom: 40px;
   }
+
+  .title {
+
+  }
+
+  .subtitle {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 160%;
+    opacity: .8;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .list-item {
+    display: flex;
+    flex-direction: column;
+    width: 31%;
+  }
+
+  .item-img {
+    width: 100%;
+    height: 570px;
+    margin: 20px 0;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  .item-desc {
+    max-height: 540px;
+    padding: 30px 25px 40px;
+    margin: 20px 0;
+    border-radius: 20px;
+    background-color: #1B2134;
+  }
+
+  .desc-icon {
+    width: 140px;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    object-fit: contain;
+  }
+
+  .desc-title {
+    font-style: italic;
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  .desc-review {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 10px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 160%;
+    opacity: .8;
+  }
+
+  .desc-btn {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 160%;
+    color: $orange-text;
+    border-bottom: 1px dashed rgba(202, 116, 60, 0.5);
+  }
+
+  .review-author {
+    display: flex;
+    align-items: center;
+  }
+
+  .author-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+    border-radius: 50%;
+    opacity: 0.8;
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 160%;
+  }
+
+  .author-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .author-name {
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 160%;
+  }
+
+  .author-date {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 160%;
+  }
 }
 
 .price {
