@@ -15,6 +15,11 @@ const REVIEW_BG = document.querySelector('.modal-bg-review')
 const REVIEW_POPUP = document.querySelector('.review-paragraph')
 const ICON_WRAPPER = document.querySelector('.icon-wrapper')
 
+const REVIEW_LIST = document.querySelector('.list-wrapper')
+const REVIEW_ITEM = document.querySelectorAll('.review-item')
+const REVIEW_BTN = document.querySelector('.reviews__btn')
+const REVIEW_SUM = document.querySelector('.reviews-sum')
+
 
 let authorIcon = document.querySelectorAll(".author-icon")
 
@@ -67,6 +72,14 @@ VIDEO.forEach((item) => {
     item.addEventListener('mouseleave', ()=> {
         item.pause()
     })
+})
+
+let sum = Object.keys(REVIEW_ITEM).length
+REVIEW_SUM.textContent = "" + sum
+
+REVIEW_BTN.addEventListener('click', ()=> {
+    REVIEW_LIST.classList.toggle('active')
+    REVIEW_BTN.classList.toggle('active')
 })
 
 DOC_CARD.forEach((item) => {
@@ -181,7 +194,6 @@ openModal.forEach((item) => {
             if (review.classList.contains(item.getAttribute('data-review'))) {
                 REVIEW_BG.classList.add('active')
                 review.classList.add('active')
-                scrollStop()
                 const itemElement = item.closest('.review-item')
                 const descReviewElement = itemElement.querySelector('.desc-review')
                 const descReviewIcon = itemElement.querySelector('.desc-icon')
