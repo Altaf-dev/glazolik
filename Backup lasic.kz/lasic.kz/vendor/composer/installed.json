@@ -1,0 +1,30 @@
+[
+    {
+        "name": "diple/mailer",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "../mailer",
+            "reference": "1c3b390f3d25586bf1fcbb73a9303e5f590b2d98"
+        },
+        "time": "2015-02-19 05:16:06",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "classmap": [
+                "Mail.php"
+            ]
+        },
+        "license": [
+            "proprietary"
+        ],
+        "authors": [
+            {
+                "name": "Pavel Kurdyukov",
+                "email": "kurdyukov.pavel@gmail.com"
+            }
+        ],
+        "description": "PHPMailerExt"
+    }
+]

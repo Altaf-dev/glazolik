@@ -1,0 +1,30 @@
+[19-Aug-2015 20:26:53 Europe/Moscow] PHP Warning:  require_once(vendor/autoload.php): failed to open stream: No such file or directory in /home/ggbwsqxd/public_html/lasic/order.php on line 2
+[19-Aug-2015 20:26:53 Europe/Moscow] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/ggbwsqxd/public_html/lasic/order.php on line 2
+[19-Aug-2015 20:35:39 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[19-Aug-2015 20:39:13 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[21-Aug-2015 20:05:19 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[24-Aug-2015 06:05:43 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[26-Aug-2015 22:54:47 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[28-Aug-2015 21:13:40 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[29-Aug-2015 08:25:49 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[09-Sep-2015 07:57:07 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[10-Sep-2015 11:19:10 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[11-Sep-2015 05:20:26 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[14-Sep-2015 11:38:06 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[16-Sep-2015 06:33:16 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[16-Sep-2015 06:33:33 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[19-Sep-2015 18:00:42 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[20-Sep-2015 08:48:21 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[21-Sep-2015 19:37:28 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[21-Sep-2015 20:35:07 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[22-Sep-2015 11:39:47 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[25-Sep-2015 23:08:13 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[28-Sep-2015 08:03:15 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[28-Sep-2015 22:39:36 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[29-Sep-2015 15:26:14 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[30-Sep-2015 08:23:58 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[01-Oct-2015 18:04:29 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[03-Oct-2015 16:50:31 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[03-Oct-2015 16:50:32 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[05-Oct-2015 17:56:41 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7
+[08-Oct-2015 12:36:36 Europe/Moscow] PHP Notice:  Undefined index: from in /home/ggbwsqxd/public_html/lasic/order.php on line 7

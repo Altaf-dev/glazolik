@@ -1,0 +1,1063 @@
+@import "helpers/mixins";
+@import "helpers/vars";
+
+//http://185.98.7.127/plesk-site-preview/lasic.kz/185.98.7.127/
+
+
+html{
+  overflow-x: hidden;
+}
+
+body{
+  //opacity: .5;
+  color: #323232;
+}
+
+header{
+
+  @include respond-to(768){
+    height: 96px;
+  }
+
+  .mobile__btn{
+    display: none;
+
+    @include respond-to(768){
+      display: block;
+      border-left: 6px solid #e4410e;
+      position: relative;
+      width: 32px;
+      height: 48px;
+
+      span{
+        position: absolute;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 700;
+        transform: translateY(-50%) rotate(90deg);
+        top: 50%;
+        margin-left: -8px;
+      }
+    }
+  }
+
+  @include respond-to(768){
+
+    .normal{
+      width: 768px;
+      padding: 0 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include respond-to(320){
+        width: 320px;
+      }
+
+      >*, .button{
+        margin: 0;
+      }
+
+      .button{
+        padding: 11px 14px;
+      }
+
+      >img{
+        width: 182px;
+        height: auto;
+      }
+
+      .phones{
+        font-size: 16px;
+
+        @include respond-to(320){
+          display: none;
+        }
+      }
+
+      .button{
+
+        @include respond-to(320){
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.normal{
+
+  @include respond-to(768){
+    width: 768px;
+  }
+  @include respond-to(320){
+    width: 320px;
+  }
+}
+
+.menu{
+
+  @include respond-to(768){
+    top: 96px;
+  }
+}
+
+.menu__handle{
+
+  @include respond-to(768){
+    display: none;
+  }
+}
+
+.morph-shape{
+
+  @include respond-to(768){
+    display: none;
+  }
+}
+
+.first{
+
+  .button.mobile{
+    display: none;
+    margin-top: 22px;
+    padding: 11px 12px;
+    background: rgba(#fff, .42);
+
+    &:after{
+      display: none;
+    }
+
+    &:hover{
+      color: initial;
+    }
+
+    @include respond-to(320){
+      display: block;
+    }
+  }
+
+  @include respond-to(768){
+    height: 574px;
+
+    @include respond-to(320){
+      height: 304px;
+    }
+
+    .first_content{
+      padding: 100px 20px 0;
+
+      @include respond-to(320){
+        padding-top: 30px;
+      }
+
+      h2{
+        font-size: 55px;
+
+        @include respond-to(320){
+          font-size: 34px;
+        }
+      }
+
+      .first_text{
+        font-size: 32px;
+
+        @include respond-to(320){
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+.more{
+
+  @include respond-to(768){
+
+    @include respond-to(320){
+      display: none;
+    }
+
+    .vase{
+
+      .more_button{
+        left: -216px;
+        width: 190px;
+
+        @include respond-to(320){
+          position: relative;
+          top: 0;
+          left: 0;
+          margin: 18px auto 0;
+        }
+
+        &:before{
+          right: -10px;
+        }
+
+        &:after{
+          top: 51px;
+        }
+      }
+
+      #cup{
+
+        @include respond-to(320){
+
+          img{
+            transform: scale(.82);
+            position: static;
+          }
+        }
+      }
+    }
+
+    .more_content{
+
+      .count_button{
+        top: 58px;
+        left: 270px;
+        width: 230px;
+        white-space: normal;
+
+        @include respond-to(320){
+          position: relative;
+          top: 0;
+          left: 0;
+          margin: -10px auto 0;
+        }
+
+        &:before{
+          right: 0;
+        }
+
+        &:after{
+          height: 6px;
+          top: 52px;
+        }
+      }
+    }
+  }
+}
+
+.why{
+
+  @include respond-to(768){
+
+    .why_content{
+      background-position: 276px 294px;
+      background-size: 60%;
+      height: 1344px;
+      position: relative;
+      padding-top: 68px;
+
+      @include respond-to(320){
+        padding-top: 36px;
+        background-position: 50% 180px;
+        background-size: 94%;
+        height: auto;
+      }
+    }
+
+    .why_text{
+
+      @include respond-to(320){
+        border: none;
+        padding: 0 20px;
+        width: 100%;
+      }
+
+      div:nth-child(1){
+        font-size: 48px;
+
+        @include respond-to(320){
+          font-size: 30px;
+        }
+      }
+
+      div:nth-child(2){
+        font-size: 65px;
+
+        @include respond-to(320){
+          font-size: 34px;
+          margin-top: 10px;
+        }
+      }
+
+      div:nth-child(3){
+        font-size: 36px;
+
+        @include respond-to(320){
+          font-size: 29px;
+        }
+      }
+    }
+
+    .adv_items{
+
+      @include respond-to(320){
+        height: auto;
+        width: 100%;
+        padding: 0 20px;
+        margin-top: 408px;
+
+        .adv{
+          margin-bottom: 52px;
+
+          .title{
+            float: none;
+            margin-left: 60px;
+            font-size: 20px;
+            padding: 14px 10px;
+          }
+
+          .adv_text{
+            width: auto;
+          }
+
+          &.adv-left{
+          }
+        }
+      }
+
+      .adv-left{
+        left:20px!important;
+      }
+
+      &.adv_items_first{
+
+        .adv{
+
+          @include respond-to(320){
+            float: none;
+          }
+
+          &.adv-left{
+
+            @include respond-to(320){
+
+              .ico1{
+                background-size: contain;
+                width: 40px;
+                height: 40px;
+                left: -60px;
+              }
+            }
+          }
+
+          &.adv-right{
+            position: absolute;
+            right: 20px;
+            bottom: 130px;
+            width: 356px;
+            left: auto!important;
+
+            @include respond-to(320){
+              position: static;
+              width: 100%;
+
+              .title{
+                margin-left: 0;
+                margin-right: 60px;
+
+                .ico2{
+                  background-size: contain;
+                  width: 47px;
+                  height: 26px;
+                  right: -60px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.adv_items_second{
+        margin-top: 30px;
+
+        .adv{
+
+          &.adv-left{
+
+            @include respond-to(320){
+              float: none;
+            }
+
+            .title{
+
+              .ico3{
+
+                @include respond-to(320){
+                  width: 40px;
+                  height: 44px;
+                  background-size: contain;
+                  left: -60px;
+                }
+              }
+            }
+          }
+
+          &.adv-right{
+            position: absolute;
+            left: 20px!important;
+            bottom: 84px;
+
+            @include respond-to(320){
+              position: static;
+              float: none;
+            }
+
+            .title{
+              float: left;
+
+              @include respond-to(320){
+                float: none;
+                margin-left: 0;
+                margin-right: 60px;
+
+                .ico4{
+                  background-size: contain;
+                  width: 41px;
+                  height: 40px;
+                  right: -60px;
+                }
+              }
+            }
+
+            .adv_text{
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.order{
+  background: url('../../../img/form_bg.jpg') center center no-repeat/cover;
+
+  @include respond-to(768){
+    height: 726px;
+
+    @include respond-to(320){
+      height: auto;
+    }
+
+    .f_order{
+      position: static;
+      float: none;
+      text-align: center;
+      width: 586px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .order_content{
+      padding-top: 50px;
+
+      @include respond-to(320){
+        padding-bottom: 40px;
+      }
+    }
+
+    .order_item{
+      float: none;
+      position: static;
+      width: 586px;
+      max-width: 100%;
+      margin: 0 auto;
+      padding-bottom: 0;
+
+      &:last-child{
+        margin-left: auto;
+      }
+
+      .order_text{
+        line-height: 1;
+
+        .title{
+
+          @include respond-to(320){
+            font-size: 24px;
+            float: none;
+            text-align: center;
+          }
+        }
+
+        .subtitle{
+
+          @include respond-to(320){
+            font-size: 20px;
+            float: none;
+            text-align: center;
+          }
+        }
+      }
+
+      .button_panel{
+
+        @include respond-to(320){
+          width: 172px;
+          margin: 15px auto 0;
+
+          .button2{
+            margin-left: 0;
+
+            &:after{
+              top: 47px;
+            }
+          }
+        }
+      }
+
+      .form_wrapper{
+        position: static;
+
+        @include respond-to(320){
+          .form{
+            max-width: 100%;
+
+            .send_button{
+              margin: 20px auto;
+              padding: 9px 0;
+            }
+
+            .input{
+              width: 100%;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .videos{
+      max-width: 100%;
+
+      .video{
+        width: 100%;
+        height: 316px;
+        margin-left: 0;
+
+        @include respond-to(320){
+          height: 180px;
+        }
+
+        iframe{
+          width: 100% !important;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.about{
+
+
+  .about_content.second{
+    display: none;
+  }
+
+  @include respond-to(768){
+
+    .normal{
+      display: flex;
+      white-space: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding-bottom: 0;
+
+      @include respond-to(320){
+        display: block;
+        padding-top: 40px;
+      }
+
+      &:not(.second){
+
+        .about_item.a_i3{
+          display: none;
+        }
+      }
+
+      &.second{
+        padding-top: 10px;
+        display: block;
+
+        @include respond-to(320){
+          //display: none;
+        }
+
+        .about_items{
+          width: 768px;
+          max-width: 100%;
+        }
+
+        .about_item{
+          width: 100%;
+
+          @include respond-to(320){
+
+            &:not([open="open"]){
+              height: auto!important;
+              padding-bottom: 10px;
+            }
+
+            .itis{
+              font-size: 24px;
+              width: calc(100% - 20px);
+              margin: 10px auto;
+
+              a{
+                color: #e4410e;
+              }
+            }
+
+            .it_list{
+              white-space: initial;
+              margin-left: 0;
+
+              .it_item{
+                height: auto;
+                display: flex;
+
+                a{
+                  font-size: 14px;
+                  line-height: 1.2;
+                }
+              }
+            }
+
+            .panel{
+              display: flex;
+              align-items: center;
+              height: auto;
+              position: static;
+
+              .panel_text{
+                display: block;
+                font-size: 16px;
+                white-space: initial;
+                position: static;
+                padding-right: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .about_items{
+      width: auto;
+      flex-shrink: 0;
+      display: flex;
+
+      @include respond-to(320){
+        display: block;
+      }
+
+      .about_item{
+
+        @include respond-to(320){
+          max-width: 100%;
+
+          &:not([open="open"]){
+            height: 298px!important;
+          }
+
+          &[open="open"]{}
+          height: auto!important;
+
+          .item_slider{
+            width: 100%;
+            height: auto;
+
+            .bb-bookblock{
+              width: 100%;
+              height: 180px;
+            }
+
+            .pv, .nx{
+              top: 60px;
+            }
+
+            .pv{
+              left: 0;
+            }
+
+            .nx{
+              right: 0;
+            }
+          }
+
+          .item_text{
+            display: none;
+          }
+
+          .panel{
+            height: 100px;
+
+            .ai{
+              margin-left: 8px;
+            }
+
+            .switch{
+              right: 0;
+              top: 45px;
+            }
+          }
+        }
+
+        .item_text_h, .item_text{
+          width: 100%;
+          white-space: initial;
+        }
+      }
+    }
+  }
+}
+
+.think{
+
+  .think_content{
+
+    @include respond-to(768){
+      padding-top: 0;
+      padding-bottom: 210px;
+
+      @include respond-to(320){
+        margin-top: 40px;
+        padding-bottom: 120px;
+      }
+
+      .think_text{
+        width: 100%;
+        line-height: 1.2;
+        margin-bottom: 40px;
+
+        @include respond-to(320){
+          padding: 25px 30px 30px 30px;
+
+          strong{
+            font-size: 24px;
+          }
+
+          .button_panel{
+            text-align: center;
+            padding: 0;
+          }
+        }
+
+        .wrapper{
+          margin-top: 30px;
+          margin-left: 90px;
+
+          @include respond-to(320){
+            margin-left: 0;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 20px;
+          }
+        }
+      }
+
+      .videos{
+        max-width: 100%;
+      }
+
+      .video{
+        width: 100%;
+        height: 316px;
+        margin-left: 0;
+
+        @include respond-to(320){
+          height: 180px;
+        }
+
+        iframe{
+          width: 100% !important;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+
+}
+
+footer{
+
+  @include respond-to(768){
+
+    @include respond-to(320){
+      height: auto;
+      font-size: 14px;
+    }
+
+    .footer_content{
+      width: 710px;
+
+      @include respond-to(320){
+        width: 320px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    a{
+      color: #323232;
+
+      &:hover{
+        color: #e5400d;
+      }
+
+      @include transite(all);
+    }
+
+    .divan{
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include respond-to(320){
+        max-width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 148px;
+        top: -152px;
+      }
+    }
+
+    .footer_item{
+
+      @include respond-to(320){
+        float: none;
+        width: 100%;
+      }
+
+      &.address{
+        margin-bottom: 20px;
+      }
+
+      &.contacts{
+        margin-bottom: 30px;
+
+        @include respond-to(320){
+          margin-bottom: 20px;
+        }
+      }
+
+      &.questions{
+        float: right;
+        margin-top: -76px;
+        margin-right: 0;
+        margin-bottom: 40px;
+        z-index: 10;
+        position: relative;
+
+        @include respond-to(768){
+          margin-top: -122px;
+        }
+        @include respond-to(320){
+          margin-top: 0;
+          margin-bottom: 20px;
+          float: none;
+
+          .button2{
+            width: 100%;
+            font-size: 14px;
+
+            &:before{
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer_item.address{
+
+    .socials{
+      max-width: 250px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+
+      @include respond-to(768){
+        margin-top: 10px;
+        margin-bottom: 0;
+      }
+
+      a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border: 1px solid #e5400d;
+        border-radius: 100%;
+
+        img{
+          max-width: 72%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .diple{
+    top: 12px;
+
+    @include respond-to(768){
+      top: 36px;
+    }
+    @include respond-to(320){
+      float: none;
+      margin-bottom: 30px;
+      top: 0;
+    }
+  }
+}
+
+nav#menu{
+
+  @include respond-to(768){
+    z-index: 0;
+
+    &.menu--open{
+      background: rgba(#fff,.92);
+      height: 100%;
+      z-index: 100;
+
+      .mobile__region{
+        display: block;
+      }
+    }
+
+    ul{
+
+      li{
+        margin: 0 0 1em 0;
+
+        .button2{
+          width: 161px;
+        }
+      }
+    }
+  }
+
+  .mobile__region{
+    display: none;
+
+    .phones{
+      display: block;
+      margin: 20px 23px;
+    }
+
+    .button{
+      margin-left: 20px;
+      width: 100%;
+    }
+  }
+}
+
+a{
+  color: #4d4d4d;
+
+  &:hover{
+    color: #e4410e;
+  }
+}
+
+.fader{
+
+  .dialog{
+    max-width: 100%;
+
+    @include respond-to(320){
+      padding-top: 40px;
+    }
+
+    .close{
+
+      @include respond-to(320){
+        right: 14px;
+        top: 14px;
+        filter: brightness(0);
+      }
+    }
+
+    .form{
+      max-width: 100%;
+
+      @include respond-to(320){
+
+        .input{
+          margin: 0 8px;
+        }
+
+        .send_button{
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.thanks{
+
+  @include respond-to(768){
+    padding: 0 20px;
+  }
+
+  h2{
+    font-size: 40px;
+    margin-top: 130px;
+
+    @include respond-to(320){
+      font-size: 20px;
+    }
+  }
+}
+
+body.thanks{
+
+  a.logo{
+    margin: 0 auto;
+  }
+}
+
+
+form{
+
+  &.is-active{
+
+    .g-recaptcha{
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .g-recaptcha{
+    position: relative;
+    height: 1px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+
+    >div{
+      position: absolute;
+      bottom: 20px;
+      right: 0;
+
+      @include respond-to(320){
+        bottom: -12px;
+        right: -22px;
+        transform: scale(.8);
+      }
+    }
+  }
+}

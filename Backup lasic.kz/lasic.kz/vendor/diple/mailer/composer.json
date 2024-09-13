@@ -1,0 +1,15 @@
+{
+  "name": "diple/mailer",
+  "description": "PHPMailerExt",
+  "minimum-stability": "alpha",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Pavel Kurdyukov",
+      "email": "kurdyukov.pavel@gmail.com"
+    }
+  ],
+  "autoload": {
+    "classmap": ["Mail.php"]
+  }
+}

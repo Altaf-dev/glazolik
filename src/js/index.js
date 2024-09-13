@@ -6,6 +6,8 @@ const SECTION = document.querySelectorAll('.section')
 const MENU_ITEMS = document.querySelectorAll('.menu-item')
 const MODAL_BG = document.querySelector('.modal-bg')
 const MODAL_THANKS = document.querySelector('.modal-thanks')
+const MODAL_ERROR = document.querySelector('.modal-error')
+
 
 const closeModalBtn = document.querySelectorAll('.closeModal')
 const openModal = document.querySelectorAll('.openModal')
@@ -175,6 +177,12 @@ function openThanksModal() {
     MODAL_THANKS.classList.add('active')
 }
 
+function openErrorModal() {
+    closeModal()
+    MODAL_BG.classList.add('active')
+    MODAL_ERROR.classList.add('active')
+}
+
 closeModalBtn.forEach((item) => {
     item.addEventListener('click', () => {
         closeModal()
@@ -217,3 +225,107 @@ function getRandomColor() {
 authorIcon.forEach((item) => {
     item.style.backgroundColor = `${getRandomColor()}`
 })
+
+
+//Формирование формы аналитики
+$(document).ready(function () {
+    let url_string = location.href;
+    let url = new URL(url_string);
+    let utm_source = url.searchParams.get('utm_source');
+    let utm_medium = url.searchParams.get('utm_meduim');
+    let utm_compaign = url.searchParams.get('utm_compaign');
+    let utm_content = url.searchParams.get('utm_content');
+    let utm_term = url.searchParams.get('utm_term');
+    let yclid = url.searchParams.get('yclid');
+    let gclid = url.searchParams.get('gclid');
+    let pm_position = url.searchParams.get('pm_position');
+    let keyword = url.searchParams.get('keyword');
+    let clientid;
+    let googlecid;
+
+    $('.analytics input[name="utm_source"]').val(utm_source);
+    $('.analytics input[name="utm_medium"]').val(utm_medium);
+    $('.analytics input[name="utm_compaign"]').val(utm_compaign);
+    $('.analytics input[name="utm_content"]').val(utm_content);
+    $('.analytics input[name="utm_term"]').val(utm_term);
+    $('.analytics input[name="yclid"]').val(yclid);
+    $('.analytics input[name="gclid"]').val(gclid);
+    $('.analytics input[name="pm_position"]').val(pm_position);
+    $('.analytics input[name="keyword"]').val(keyword);
+
+    if (document.cookie.search('(?:^|;)\\s*_ga=([^;]*)') !== -1) {
+        googlecid = document.cookie.match('(?:^|;)\\s*_ga=([^;]*)');
+        $('.analytics input[name="googlecid"]').val(googlecid[0].slice(10));
+    } else {
+        googlecid = 'GA - отсуствует'
+        $('.analytics input[name="googlecid"]').val(googlecid);
+    }
+
+    if (document.cookie.search('(?:^|;)\\s*_ym_uid=([^;]*)') !== -1) {
+        clientid = document.cookie.match('(?:^|;)\\s*_ym_uid=([^;]*)');
+        $('.analytics input[name="clientid"]').val(clientid[1]);
+    } else {
+        clientid = 'YM - отсуствует'
+        $('.analytics input[name="clientid"]').val(clientid);
+    }
+
+});
+
+const googleStat = document.getElementById('googleStat')
+const yandexStat = document.getElementById('yandexStat')
+
+function sendStats() {
+    if (googleStat) {
+        googleStat.click()
+    }
+
+    if (yandexStat) {
+        yandexStat.click()
+    }
+}
+
+
+
+//Передача лида и формирование формы аналитики
+$(function () {
+    $('form').submit(function (e) {
+        e.preventDefault()
+        $(this).find('input').each(function() {
+            let $input = $(this);
+
+            if ($input.attr('name') === 'name' && /\d/.test($input.val())) {
+                $input.addClass('invalid');
+            }
+        });
+        let $form = $(this),
+            formID,
+            formData = new FormData(this);
+        $("form#analytics").serializeArray().forEach(function (field) {
+            formData.append(field.name, field.value)
+        });
+        formID = "#" + $form.attr('id') + " button";  // Формируем переменную с номер формы и добавляем селектор button
+        $(formID).prop('disabled', true);
+        $(formID).css({'opacity': 0.3});
+        $.ajax({
+            url: $form.attr('action'),
+            type: $form.attr('method'),
+            data: formData,
+            cache: false,
+            contentType: false,
+            processData: false,
+        }).done(function () {
+            let fileName = 'Прикрепить файл';
+            $('form').trigger('reset');
+            $('.modal-thanks').fadeIn();
+            $(formID).prop('disabled', false);
+            $(formID).css({'opacity': 1});
+            openThanksModal()
+            sendStats()
+        }).fail(function () {
+            openErrorModal()
+            $(formID).prop('disabled', false);
+            $(formID).css({'opacity': 1});
+            $('form').trigger('reset');
+        })
+    });
+});

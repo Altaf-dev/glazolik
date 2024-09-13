@@ -1,0 +1,14 @@
+{
+  "name": "kz/glazolik",
+  "description": "gip",
+  "minimum-stability": "dev",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "../mailer"
+    }
+  ],
+  "require": {
+    "diple/mailer": "*"
+  }
+}

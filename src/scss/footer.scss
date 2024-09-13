@@ -364,3 +364,12 @@
     font-size: 1.4rem;
   }
 }
+
+.modal-thanks,
+.modal-error {
+  .modal__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

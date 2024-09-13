@@ -38,7 +38,8 @@ if (isset($_FILES['userfile'])) {
 /*
  * Отправляем лида в Битрикс
  */
-$leadSender = new BitrixLeadSender("https://kazuniongroup.bitrix24.kz/rest/6/w7fan3h15iei2kd7/crm.lead.add.json");
+ //https://glazolik.bitrix24.kz/rest/9/uq7faswfpqwf1dwu/
+$leadSender = new BitrixLeadSender("https://glazolik.bitrix24.kz/rest/9/uq7faswfpqwf1dwu/crm.lead.add.json");
 if ($leadSender->send($lead)) {
     echo "Ok";
     http_response_code(200);

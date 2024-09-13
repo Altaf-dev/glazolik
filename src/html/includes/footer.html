@@ -48,7 +48,31 @@
         <div class="icon-wrapper"></div>
         <p class="review-paragraph"></p>
     </div>
-
+    <div class="modal modal-thanks">
+        <button class="modal-close closeModal"></button>
+        <div class="modal__body">
+            <svg class="modal-icon" width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="34" cy="33.5" r="27.5" fill="#207953"/>
+                <path d="M42 28.25L31.375 39L25 32.55" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3 class="title">Спасибо за обращение!</h3>
+            <span class="modal-subtitle">Ваша заявка принята</span>
+        </div>
+    </div>
+    <div class="modal modal-error">
+        <button class="modal-close closeModal"></button>
+        <div class="modal__body">
+            <svg width="68" height="67" viewBox="0 0 68 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="34.5" cy="33.5" r="27.5" fill="#FE0000"/>
+                <path d="M26 41.2788L42.2788 25" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                <path d="M26 41.2788L42.2788 25" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                <path d="M26 25.2788L42.2788 41.5576" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                <path d="M26 25.2788L42.2788 41.5576" stroke="white" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            <h3 class="title">Что то пошло не так!</h3>
+            <span class="modal-subtitle">Попробуйте заново</span>
+        </div>
+    </div>
 
 </footer>
 <script src="uploads/jquery3.4.1.js"></script>

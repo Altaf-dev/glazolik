@@ -1771,7 +1771,7 @@
     flex-direction: column;
     width: 31%;
     &:nth-child(2n) {
-      .item-img {
+      .img-link {
         order: 2;
         @media screen and (max-width: 960px) {
           order: 1;
@@ -1797,13 +1797,39 @@
     }
   }
 
-  .item-img {
+  .img-link {
+    position: relative;
+    display: block;
     width: 100%;
     height: 570px;
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 20px;
-    object-fit: cover;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      background-image: url("../img/playbtn.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 115px;
+      height: 140px;
+      transition: .3s;
+      @media screen and (max-width: 767px) {
+        width: 80px;
+        height: 95px;
+      }
+    }
+
+    &:hover {
+      &:before {
+        transform: scale(1.15);
+      }
+    }
     @media screen and (max-width: 960px) {
       width: 270px;
       height: 100%;
@@ -1811,6 +1837,12 @@
       margin-bottom: 0;
       margin-right: 10px;
     }
+  }
+
+  .item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .item-desc {
