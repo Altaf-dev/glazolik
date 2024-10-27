@@ -1873,6 +1873,10 @@
   }
 
   .desc-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     font-style: italic;
     font-size: 2.4rem;
     font-weight: 400;

@@ -203,11 +203,13 @@ openModal.forEach((item) => {
                 REVIEW_BG.classList.add('active')
                 review.classList.add('active')
                 const itemElement = item.closest('.review-item')
+                const descReviewTitle = itemElement.querySelector('.desc-title')
                 const descReviewElement = itemElement.querySelector('.desc-review')
                 const descReviewIcon = itemElement.querySelector('.desc-icon')
                 let icon = descReviewIcon.getAttribute('src')
-                REVIEW_POPUP.innerHTML = descReviewElement.innerHTML
+                REVIEW_POPUP.innerHTML = `<p>${descReviewTitle.innerHTML}</p>` + `<br>` + `<p>${descReviewElement.innerHTML}</p>`
                 ICON_WRAPPER.innerHTML = `<img src="${icon}" alt="">`
+
             }
         })
     })
